@@ -6,6 +6,7 @@ import pandas as pd
 from dataclasses import dataclass
 
 from sklearn.model_selection import train_test_split
+from src.components.data_transformation import datatransformationconfig,getting_datatransformation_object
 @dataclass
 class DataIngestionConfig:
     train_data_path:str=os.path.join('artifacts','train_data')
@@ -44,4 +45,6 @@ class DataIngestion:
     
 if __name__=="__main__":
     obj=DataIngestion()
-    obj.DataIngestionInitiated()
+    train_path,test_path=obj.DataIngestionInitiated()
+    object2=getting_datatransformation_object()
+    train_arr,test_arr,_=object2.intiative_data_transformation(train_path,test_path)
