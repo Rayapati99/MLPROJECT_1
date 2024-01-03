@@ -7,6 +7,8 @@ from dataclasses import dataclass
 
 from sklearn.model_selection import train_test_split
 from src.components.data_transformation import datatransformationconfig,getting_datatransformation_object
+
+from src.components.model_trainer import modeltrainer
 @dataclass
 class DataIngestionConfig:
     train_data_path:str=os.path.join('artifacts','train_data')
@@ -48,3 +50,6 @@ if __name__=="__main__":
     train_path,test_path=obj.DataIngestionInitiated()
     object2=getting_datatransformation_object()
     train_arr,test_arr,_=object2.intiative_data_transformation(train_path,test_path)
+    
+    object3=modeltrainer()
+    object3.initative_modeltrainer(train_arr,test_arr)
