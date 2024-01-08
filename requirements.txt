@@ -1,7 +1,10 @@
+Cmake
+pyqt5
+turtle==0.0.1
 pandas
-numpy
+NumPy
 matplotlib
 seaborn
 scikit-learn
+flask
 dill
-#-e .
