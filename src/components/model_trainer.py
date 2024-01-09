@@ -22,7 +22,7 @@ class modeltrainerconfig:
     trainer_model_path=os.path.join('artifacts','model.pkl')
     
 class modeltrainer:
-    def __init__(self) -> None:
+    def __init__(self):
         self.model_trainer_config=modeltrainerconfig()
         
     def initative_modeltrainer(self,train_arr,test_arr):
